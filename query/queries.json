@@ -1,0 +1,7 @@
+{
+    "getAllData" : "SELECT * FROM [dbo].[League]",
+    "getOneData" : "SELECT * FROM [dbo].[League] where LID = @LID",
+    "addNewData" : "INSERT INTO [dbo].[League] (LID,year,season,title) VALUES (@LID,@year,@season,@title) ",
+    "deleteData" : "DELETE FROM [dbo].[League] WHERE LID = @LID",
+    "updateData" : "UPDATE [dbo].[League] SET year = @newYear, season = @newSeason, title = @newTitle WHERE LID = @LID"
+}

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Update League</title>
+    </head>
+    <body>
+        <h1>Update League</h1>
+        <form method="post">    
+            <% for(var i=0;i<larr.length;i++){
+                let league = larr[i];
+            %> 
+        <fieldset>
+        <legend>Form</legend>
+        <label for="LID">LID:</label>
+        <input type="text" name="LID" value="<%= league.LID %>"/><br /><br />
+        <label for="year">year:</label>
+        <input type="text" name="year" value="<%= league.year %>" /><br /><br />
+        <label for="season">season:</label>
+        <input type="text" name="season" value="<%= league.season %>" /><br /><br />
+        <label for="title">title:</label>
+        <input type="text" name="title" value="<%= league.title %>" /><br /><br />
+        <input type="submit" value="submit" formaction="/api/updateLeague/<%=league.LID%>"/>
+        </fieldset>
+            <% } %>
+        </form>
+    </body>
+</html>

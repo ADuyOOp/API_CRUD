@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>List Leagues</title>
+    </head>
+    <body>
+        <h1>List Leagues</h1>
+        <form accept="/" method="post">
+        <table border = "1"> 
+            <thead>                
+                <th>LID</th>
+                <th>year</th>
+                <th>season</th>
+                <th>title</th>                
+            </thead>
+            <tbody>
+                <% console.log(larr) %>
+                <% for(var i=0;i<larr.length;i++){
+                    let league = larr[i];
+                %>    
+                    <tr>
+                        <td><%= league.LID %></td>
+                        <td><%= league.year %></td>
+                        <td><%= league.season %></td>
+                        <td><%= league.title %></td>
+                    </tr>
+                <% } %>
+            </tbody>
+        </table>
+    </form>
+    </body>
+</html>
+
+
+
